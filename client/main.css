@@ -1,0 +1,27 @@
+h1{
+    color: chocolate;
+    text-align: center;
+}
+
+span{
+    font-size: 14pt;
+    font-weight: 400;
+}
+
+.delete{
+    font-size: 14pt;
+    background: none;
+    color: black;
+    border: none;
+}
+
+
+@media only screen and (min-width: 767px) {
+    li{
+        font-size: 14pt;
+    }
+    
+    .delete{
+        font-size: 14pt;
+    }
+}

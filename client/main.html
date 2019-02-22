@@ -1,0 +1,39 @@
+<head>
+    <title>meteorApp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ </head>
+  
+ <body>
+    <div class="container">
+        <h1 class="display-4 font-weight-bold">Your Todos</h1>
+        <br>
+        <div class="text-center" style="font-size: 2rem;">
+        {{> dbList}}
+        <br>
+        {{> form}}
+        </div>
+    </div>
+</body>
+
+<template name = "myTemplate">
+    <form class="form-group">
+        <input type = "text" name = "myForm">
+        <input type = "submit" value = "SUBMIT">
+    </form>
+</template>
+
+<template name="dbList">
+    {{#each getData}}
+            <span class="todos">- {{text}} <button class="delete">&times;</button></span>
+            <br/>
+    {{/each}}
+</template>
+
+<template name="form">
+    <form>
+        <h3 class="font-weight-bold">Add a Todo</h3>
+        <input type="text" class="form-control" name="addTodo" id="addTodo" placeholder="Enter Todo">
+        <button style="margin: 1%;" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</template>
